@@ -8,13 +8,13 @@
 	height: 12vh;
 
 	&-title {
-		font-size: clamp(1.2rem, 1.5rem + 2.6vw, 3rem);
+		font-size: clamp(1.2rem, 1.6rem + 2.6vw, 3rem);
 	}
 
 	&-buttons {
 		button {
 			margin-right: 1vw;
-			padding: 0.8vh 1.6vw;
+			padding: 1vh 1.8vw;
 			font-weight: bold;
 			background: none;
 			border: 1px solid var(--buttonBorder);
@@ -31,7 +31,7 @@
 				color: var(--fontHover);
 				background-color: var(--buttonBackgroundActive);
 				box-shadow: inset 5px 5px 3px rgba(0, 0, 0, 0.649);
-				text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.589);
+				text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.654);
 			}
 
 			&:focus {
@@ -41,6 +41,199 @@
 			i {
 				margin-right: 0.2vw;
 			}
+		}
+	}
+}
+
+.notes-area {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: start;
+	flex-wrap: wrap;
+	padding: 4vh 4vw;
+	width: 100%;
+
+	.note {
+		margin: 1.5rem 0.5rem;
+		height: 24vh;
+		width: 260px;
+		background-color: var(--backgroundNoteBody);
+		border: 1px solid var(--buttonBackgroundActive);
+		border-radius: 8px;
+		overflow: auto;
+
+		&-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 4% 5%;
+			background: var(--backgroundNoteHeader);
+
+			&-title {
+				font-size: clamp(0.8rem, 1.2rem + 1.5vw, 2.2rem);
+			}
+
+			&-delete {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 2% 4%;
+				font-size: clamp(1rem, 1.3rem + 0.7vw, 1.8rem);
+				background: none;
+				border: 1px solid var(--buttonBorder);
+				border-radius: 8px;
+				transition: color 0.2s, background-color 0.2s;
+				cursor: pointer;
+
+				&:hover {
+					color: var(--fontHover);
+					background-color: var(--buttonBackgroundHover);
+				}
+
+				&:active {
+					color: var(--fontHover);
+					background-color: var(--buttonBackgroundActive);
+					box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.44);
+					text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.654);
+				}
+
+				&:focus {
+					outline: 1px solid var(--buttonBackgroundActive);
+				}
+			}
+		}
+
+		&-body {
+			padding: 5%;
+		}
+	}
+}
+
+.note-panel {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 4vh 0;
+	width: 80vw;
+	background-color: whitesmoke;
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.506);
+	border-radius: 12px;
+
+	h2 {
+		margin-bottom: 2vh;
+		text-transform: uppercase;
+	}
+
+	label {
+		margin-bottom: 1.5vh;
+	}
+
+	#text,
+	#category {
+		margin-bottom: 2vh;
+		padding: 1vh 4vw;
+		width: 80%;
+		min-width: 80%;
+		max-width: 80%;
+		max-height: 250px;
+		border-radius: 12px;
+
+		&:focus {
+			outline: 1px solid var(--buttonBackgroundActive);
+		}
+	}
+
+	#text {
+		height: 100px;
+		min-height: 100px;
+	}
+
+	.error {
+		margin-bottom: 2vh;
+		color: var(--errorColor);
+		visibility: hidden;
+	}
+
+	.panel-buttons {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		width: 60%;
+
+		button {
+			padding: 1vh 1.8vw;
+			font-weight: bold;
+			background: none;
+			border: 1px solid var(--buttonBorder);
+			border-radius: 8px;
+			cursor: pointer;
+			transition: color 0.2s, background-color 0.2s;
+
+			&:hover {
+				color: var(--fontHover);
+				background-color: var(--buttonBackgroundHover);
+			}
+
+			&:active {
+				color: var(--fontHover);
+				background-color: var(--buttonBackgroundActive);
+				box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.44);
+				text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.654);
+			}
+
+			&:focus {
+				outline: 1px solid var(--buttonBackgroundActive);
+			}
+		}
+	}
+}
+
+//-----------------------------------------------
+//-----------------------------------------------
+//-----------------------------------------------
+//-----------------------------------------------
+//-----------------------------------------------
+
+@media only screen and (min-width: 320px) {
+	.note-panel {
+		.panel-buttons {
+			width: 70%;
+		}
+	}
+}
+@media only screen and (min-width: 768px) {
+	.note-panel {
+		.panel-buttons {
+			width: 40%;
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.note-panel {
+		.panel-buttons {
+			width: 30%;
+		}
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.note-panel {
+		width: 60vw;
+
+		#text,
+		#category {
+			margin-bottom: 2vh;
+			padding: 1vh 1vw;
+			width: 80%;
+			max-height: 250px;
+			border-radius: 12px;
 		}
 	}
 }
