@@ -74,6 +74,7 @@
 			justify-content: space-between;
 			align-items: center;
 			padding: 4% 5%;
+			width: 100%;
 			background: var(--backgroundMenu);
 
 			&-title {
@@ -87,7 +88,7 @@
 				padding: 2% 4%;
 				font-size: clamp(1rem, 1.3rem + 0.7vw, 1.8rem);
 				background: none;
-                background-color: var(--backgroundmenuButton);
+				background-color: var(--backgroundmenuButton);
 				border: 1px solid var(--buttonBorder);
 				border-radius: 8px;
 				transition: color 0.2s, background-color 0.2s;
@@ -113,6 +114,7 @@
 
 		&-body {
 			padding: 5%;
+            overflow: auto;
 		}
 	}
 }

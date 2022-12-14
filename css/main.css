@@ -101,6 +101,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 4% 5%;
+  width: 100%;
   background: var(--backgroundMenu);
 }
 .notes-area .note-header-title {
@@ -134,6 +135,7 @@ body {
 }
 .notes-area .note-body {
   padding: 5%;
+  overflow: auto;
 }
 
 .note-panel {
