@@ -10,6 +10,10 @@
 
 	&-title {
 		font-size: clamp(1.2rem, 1.6rem + 2.6vw, 3rem);
+
+		i {
+			margin-right: 0.8vw;
+		}
 	}
 
 	&-buttons {

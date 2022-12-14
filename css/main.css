@@ -12,12 +12,12 @@
 
 :root {
   --backgroundGradient: linear-gradient(110deg, #ffcdc1 2%, #f5bea1 90%);
-  --backgroundMenu: #dfa2839f;
+  --backgroundMenu: #dfa283bb;
   --backgroundmenuButton: #f5bea1;
   --backgroundNoteHeader: #dfa2839f;
   --backgroundNoteBody: #fedbc9;
   --fontHover: #ffcdc1;
-  --buttonBackgroundHover: rgba(86, 73, 67, 0.88);
+  --buttonBackgroundHover: rgba(86, 73, 67, 0.84);
   --buttonBackgroundActive: rgb(60, 50, 46, 0.88);
   --black: black;
   --buttonBorder: rgba(86, 73, 67, 0.804);
@@ -46,6 +46,9 @@ body {
 }
 .menu-title {
   font-size: clamp(1.2rem, 1.6rem + 2.6vw, 3rem);
+}
+.menu-title i {
+  margin-right: 0.8vw;
 }
 .menu-buttons button {
   margin-right: 1vw;
