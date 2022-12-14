@@ -11,14 +11,14 @@
 }
 
 :root {
-  --backgroundGradient: linear-gradient(110deg, #ffcdc1 2%, #f5bea1 90%);
+  --backgroundGradient: linear-gradient(110deg, #ffd1c1 80%, #f3c1a6a4);
   --backgroundMenu: #dfa283bb;
-  --backgroundmenuButton: #f5bea1;
+  --backgroundmenuButton: #ffd1c1;
   --backgroundNoteHeader: #dfa2839f;
   --backgroundNoteBody: #fedbc9;
   --fontHover: #ffcdc1;
-  --buttonBackgroundHover: rgba(86, 73, 67, 0.84);
-  --buttonBackgroundActive: rgb(60, 50, 46, 0.88);
+  --buttonBackgroundHover: rgba(98, 85, 79, 0.84);
+  --buttonBackgroundActive: rgba(90, 77, 72, 0.88);
   --black: black;
   --buttonBorder: rgba(86, 73, 67, 0.804);
   --errorColor: rgb(175, 26, 26);
@@ -101,7 +101,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 4% 5%;
-  background: var(--backgroundNoteHeader);
+  background: var(--backgroundMenu);
 }
 .notes-area .note-header-title {
   font-size: clamp(0.8rem, 1.2rem + 1.5vw, 2.2rem);
@@ -113,6 +113,7 @@ body {
   padding: 2% 4%;
   font-size: clamp(1rem, 1.3rem + 0.7vw, 1.8rem);
   background: none;
+  background-color: var(--backgroundmenuButton);
   border: 1px solid var(--buttonBorder);
   border-radius: 8px;
   transition: color 0.2s, background-color 0.2s;

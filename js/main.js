@@ -29,6 +29,10 @@ const openPanel = () => {
 
 const closePanel = () => {
 	notePanel.style.display = 'none';
+	error.style.visibility = 'hidden';
+	textarea.textContent = '';
+	category.selectedIndex = 0;
+	category.value = '0';
 };
 
 //-----------------------------------------------
