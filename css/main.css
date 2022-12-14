@@ -12,6 +12,8 @@
 
 :root {
   --backgroundGradient: linear-gradient(110deg, #ffcdc1 2%, #f5bea1 90%);
+  --backgroundMenu: #dfa2839f;
+  --backgroundmenuButton: #f5bea1;
   --backgroundNoteHeader: #dfa2839f;
   --backgroundNoteBody: #fedbc9;
   --fontHover: #ffcdc1;
@@ -40,6 +42,7 @@ body {
   align-items: center;
   padding: 4vh 4vw;
   height: 12vh;
+  background-color: var(--backgroundMenu);
 }
 .menu-title {
   font-size: clamp(1.2rem, 1.6rem + 2.6vw, 3rem);
@@ -49,6 +52,7 @@ body {
   padding: 1vh 1.8vw;
   font-weight: bold;
   background: none;
+  background-color: var(--backgroundmenuButton);
   border: 1px solid var(--buttonBorder);
   border-radius: 8px;
   cursor: pointer;
