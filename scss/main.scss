@@ -1,1 +1,46 @@
 @use 'reset' as *;
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4vh 4vw;
+	height: 12vh;
+
+	&-title {
+		font-size: clamp(1.2rem, 1.5rem + 2.6vw, 3rem);
+	}
+
+	&-buttons {
+		button {
+			margin-right: 1vw;
+			padding: 0.8vh 1.6vw;
+			font-weight: bold;
+			background: none;
+			border: 1px solid var(--buttonBorder);
+			border-radius: 8px;
+			cursor: pointer;
+			transition: color 0.2s, background-color 0.2s;
+
+			&:hover {
+				color: var(--fontHover);
+				background-color: var(--buttonBackgroundHover);
+			}
+
+			&:active {
+				color: var(--fontHover);
+				background-color: var(--buttonBackgroundActive);
+				box-shadow: inset 5px 5px 3px rgba(0, 0, 0, 0.649);
+				text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.589);
+			}
+
+			&:focus {
+				outline: 1px solid var(--buttonBackgroundActive);
+			}
+
+			i {
+				margin-right: 0.2vw;
+			}
+		}
+	}
+}

@@ -9,7 +9,11 @@
 :root {
 	//colors
 	--backgroundGradient: linear-gradient(110deg, #ffcdc1 2%, #f5bea1 90%);
+    --fontHover: #ffcdc1;
+    --buttonBackgroundHover: rgb(86, 73, 67);
+    --buttonBackgroundActive: rgb(60, 50, 46);
 	--black: black;
+    --buttonBorder: rgba(86, 73, 67, 0.804);
 }
 
 html {

@@ -8,7 +8,11 @@
 
 :root {
   --backgroundGradient: linear-gradient(110deg, #ffcdc1 2%, #f5bea1 90%);
+  --fontHover: #ffcdc1;
+  --buttonBackgroundHover: rgb(86, 73, 67);
+  --buttonBackgroundActive: rgb(60, 50, 46);
   --black: black;
+  --buttonBorder: rgba(86, 73, 67, 0.804);
 }
 
 html {
@@ -21,4 +25,41 @@ body {
   font-size: 1.6rem;
   color: var(--black);
   background-image: var(--backgroundGradient);
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4vh 4vw;
+  height: 12vh;
+}
+.menu-title {
+  font-size: clamp(1.2rem, 1.5rem + 2.6vw, 3rem);
+}
+.menu-buttons button {
+  margin-right: 1vw;
+  padding: 0.8vh 1.6vw;
+  font-weight: bold;
+  background: none;
+  border: 1px solid var(--buttonBorder);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.2s;
+}
+.menu-buttons button:hover {
+  color: var(--fontHover);
+  background-color: var(--buttonBackgroundHover);
+}
+.menu-buttons button:active {
+  color: var(--fontHover);
+  background-color: var(--buttonBackgroundActive);
+  box-shadow: inset 5px 5px 3px rgba(0, 0, 0, 0.649);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.589);
+}
+.menu-buttons button:focus {
+  outline: 1px solid var(--buttonBackgroundActive);
+}
+.menu-buttons button i {
+  margin-right: 0.2vw;
 }/*# sourceMappingURL=main.css.map */
