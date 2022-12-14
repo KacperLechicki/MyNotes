@@ -58,7 +58,7 @@ const createNote = () => {
 
 	newNote.innerHTML = `<div class="note-header">
     <h3 class="note-header-title">${selectedValue}</h3>
-    <button class="note-header-delete"><i class="fas fa-times icon"></i></button>
+    <button class="note-header-delete" onclick="handleDeleteNote(${cardID})"><i class="fas fa-times icon"></i></button>
 </div>
 <div class="note-body">${textarea.value}</div>`;
 
@@ -70,6 +70,15 @@ const selectValue = () => {
 	selectedValue = category.options[category.selectedIndex].text;
 };
 
+const handleDeleteNote = (id) => {
+	const noteToDelete = document.getElementById(id);
+	noteArea.removeChild(noteToDelete);
+};
+
+const deleteAllNotes = () => {
+	noteArea.textContent = '';
+};
+
 //-----------------------------------------------
 //-----------------------------------------------
 //-----------------------------------------------
@@ -79,3 +88,4 @@ const selectValue = () => {
 addBtn.addEventListener('click', openPanel);
 cancelBtn.addEventListener('click', closePanel);
 saveBtn.addEventListener('click', addNote);
+deleteAllBtn.addEventListener('click', deleteAllNotes);
