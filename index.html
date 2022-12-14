@@ -16,6 +16,46 @@
 
 <body>
 
+    <div class="menu">
+        <h1 class="title"><i class="fas fa-sticky-note"></i>MyNotes</h1>
+        <div class="menu-buttons">
+            <button class="add icon"><i class="fas fa-plus"></i>Add</button>
+            <button class="deleteAll icon"><i class="fas fa-trash-alt"></i>Delete</button>
+        </div>
+    </div>
+
+    <div class="notes-area">
+        <div class="note">
+            <div class="note-header">
+                <h3 class="note-title">Note #1</h3>
+                <button class="note-delete"><i class="fas fa-times icon"></i></button>
+            </div>
+            <div class="note-body">Lorem ipsum dolor sit amet.</div>
+        </div>
+    </div>
+
+    <div class="note-panel">
+        <h2>Add note</h2>
+        <label for="category">Choose category</label>
+        <select id="category">
+            <option value="0" disabled selected>--choose category--</option>
+            <option value="1">Shopping</option>
+            <option value="1">Work</option>
+            <option value="1">Free time</option>
+            <option value="1">Other</option>
+        </select>
+
+        <label for="text">Type your note: </label>
+        <textarea id="text" placeholder="Text of your note..."></textarea>
+
+        <p class="error">Complete all fields!</p>
+
+        <div class="panel-buttons">
+            <button class="save icon"><i class="fas fa-save"></i> Save</button>
+            <button class="cancel icon"><i class="far fa-window-close"></i> Cancel</button>
+        </div>
+    </div>
+
     <script src="./js/main.js"></script>
 </body>
 
