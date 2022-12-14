@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	//colors
+	--backgroundGradient: linear-gradient(310deg, #ffb4a2 80%, #ffcdb2);
+	--black: black;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	min-height: 100vh;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1.6rem;
+	color: var(--black);
+	background-image: var(--backgroundGradient);
+}
