@@ -114,7 +114,8 @@
 
 		&-body {
 			padding: 5%;
-            overflow: auto;
+			overflow: auto;
+			overflow-wrap: break-word;
 		}
 	}
 }

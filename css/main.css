@@ -8,6 +8,7 @@
 
 ::-webkit-scrollbar {
   background: none;
+  width: 0;
 }
 
 :root {
@@ -136,6 +137,7 @@ body {
 .notes-area .note-body {
   padding: 5%;
   overflow: auto;
+  overflow-wrap: break-word;
 }
 
 .note-panel {
